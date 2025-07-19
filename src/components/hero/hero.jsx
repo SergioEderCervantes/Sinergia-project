@@ -3,7 +3,7 @@ import HeroImg from "./heroImg";
 
 export default function Hero() {
   return (
-    <div className="bg-lavender-web-200 flex justify-around py-5 lg:p-12">
+    <div className="bg-lavender-web-200 flex flex-col xl:flex-row xl:justify-around py-5 xl:p-12">
       <HeroDesc />
       <HeroImg />
     </div>
