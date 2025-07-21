@@ -4,6 +4,9 @@ import Hero from "../components/hero/hero";
 import MobileNavBar from "../components/mobileNavBar";
 import AboutUs from "../components/about-us/about-us";
 import Projects from "../components/projects/projects";
+import Services from "../components/services/services";
+
+
 export default function MainPage() {
   const [isMenuExpanded, setIsMenuExpanded] = useState(false);
 
@@ -18,6 +21,7 @@ export default function MainPage() {
       <Hero />
       <AboutUs/>
       <Projects/>
+      <Services/>
     </>
   );
 }
