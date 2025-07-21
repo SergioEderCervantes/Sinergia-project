@@ -10,19 +10,19 @@ export default function NavBar({ expand }) {
       </a>
 
       <div className="navegacion hidden gap-3 text-lg lg:flex font-semibold">
-        <a className="hover:text-gunmetal-400" href="#">
+        <a className="hover:text-teal" href="#">
           Home
         </a>
-        <a className="hover:text-gunmetal-400" href="#">
+        <a className="hover:text-teal" href="#">
           About
         </a>
-        <a className="hover:text-gunmetal-400" href="#">
+        <a className="hover:text-teal" href="#">
           Projects
         </a>
-        <a className="hover:text-gunmetal-400" href="#">
+        <a className="hover:text-teal" href="#">
           Services
         </a>
-        <a className="hover:text-gunmetal-400" href="#">
+        <a className="hover:text-teal" href="#">
           Contact
         </a>
       </div>
