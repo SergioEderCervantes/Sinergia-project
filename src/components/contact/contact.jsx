@@ -1,9 +1,28 @@
-export default function Contact() {
-  function handleSubmit(event) {
-    event.preventDefault();
-    alert("Form submitted");
-  }
+import axios from "axios";
 
+
+export default function Contact() {
+  
+  const handleSubmit = async (e)  =>{
+    const webhookUrl = "http://localhost:5678/webhook/27649da8-d4e9-4a33-95a0-9ecddff68fbf"
+    const webhookTestUrl = "http://localhost:5678/webhook-test/27649da8-d4e9-4a33-95a0-9ecddff68fbf"
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form)
+
+    console.log(formData);
+
+    const data = Object.fromEntries(formData.entries());
+    console.log("Data: ", data);
+    try{
+      const res = await axios.post(webhookUrl,data)
+      console.log(res.data);
+    }catch (err){
+      console.log(err);
+    }
+  }
+  
   return (
     <section className="bg-lavender-web-200 flex flex-col items-center py-5 xl:p-12">
       <h2 className="text-gunmetal-600 my-2 text-4xl">Let's work together</h2>
@@ -21,6 +40,7 @@ export default function Contact() {
               <input
                 type="text"
                 placeholder="John"
+                name="firstName"
                 className="focus:ring-lavender-web w-full rounded-md border border-gray-300 px-3 py-2 focus:ring focus:outline-none"
               />
             </div>
@@ -31,6 +51,7 @@ export default function Contact() {
               <input
                 type="text"
                 placeholder="Doe"
+                name="lastName"
                 className="focus:ring-lavender-web w-full rounded-md border border-gray-300 px-3 py-2 focus:ring focus:outline-none"
               />
             </div>
@@ -43,6 +64,7 @@ export default function Contact() {
             <input
               type="email"
               placeholder="john@example.com"
+              name="email"
               className="focus:ring-lavender-web w-full rounded-md border border-gray-300 px-3 py-2 focus:ring focus:outline-none"
             />
           </div>
@@ -54,6 +76,7 @@ export default function Contact() {
             <input
               type="text"
               placeholder="Your Company"
+              name="company"
               className="focus:ring-lavender-web w-full rounded-md border border-gray-300 px-3 py-2 focus:ring focus:outline-none"
             />
           </div>
@@ -63,6 +86,7 @@ export default function Contact() {
               Message
             </label>
             <textarea
+              name="message"
               placeholder="Tell us about your project..."
               className="focus:ring-lavender-web h-28 w-full resize-none rounded-md border border-gray-300 px-3 py-2 focus:ring focus:outline-none"
             ></textarea>
