@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="flex w-full justify-around text-white">
         <div >
           <div className="flex justify-center lg:justify-start items-center gap-4  ">
-            <img src="/vite.svg" alt="logo" />
+            <img className="w-20" src="/isotipo.svg" alt="logo" />
             <h4 className="text-2xl font-bold ">MarketPro</h4>
           </div>
           <span>Elevating brand with strategic marketing solutions.</span>
