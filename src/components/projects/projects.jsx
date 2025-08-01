@@ -2,7 +2,7 @@ import Card from "./card";
 
 export default function Projects() {
   return (
-    <section className="bg-lavender-web-200 flex flex-col items-center py-5 xl:p-12">
+    <section id="projects" className="bg-lavender-web-200 flex flex-col items-center py-5 xl:p-12">
       <h2 className="text-gunmetal-600 my-2 text-4xl">Our Projects</h2>
       <span className="text-gunmetal-600 w-full text-center text-xl md:w-1/2">
         Successful campaigns that drove to real results for our clients

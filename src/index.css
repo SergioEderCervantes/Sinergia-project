@@ -46,3 +46,7 @@
   --color-lavender-web-800: #384a83;
   --color-lavender-web-900: #1c2542;
 }
+
+html{
+  scroll-behavior: smooth;
+}

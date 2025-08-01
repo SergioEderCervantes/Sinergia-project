@@ -5,7 +5,7 @@ import AboutCard from "./about-us-card";
 
 export default function AboutUs() {
   return (
-    <section className="flex flex-col items-center p-12">
+    <section id="about" className="flex flex-col items-center p-12">
       <h3 className="text-4xl">About Us</h3>
       <p className="w-full md:w-1/2 text-center text-xl">
         We're a dynamic marketing startup dedicated to helping buissnesses

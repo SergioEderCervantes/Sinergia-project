@@ -24,7 +24,7 @@ export default function Contact() {
   }
   
   return (
-    <section className="bg-lavender-web-200 flex flex-col items-center py-5 xl:p-12">
+    <section id="contact" className="bg-lavender-web-200 flex flex-col items-center py-5 xl:p-12">
       <h2 className="text-gunmetal-600 my-2 text-4xl">Let's work together</h2>
       <span className="text-gunmetal-600 w-full text-center text-xl md:w-1/2">
         Ready to transform your marketing? Get in touch with us today.
