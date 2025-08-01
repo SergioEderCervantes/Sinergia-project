@@ -8,6 +8,7 @@ import Services from "../components/services/services";
 import Contact from "../components/contact/contact";
 import Footer from "../components/footer";
 import GsapAnimation from "../first-gsap-animation";
+import HeroAnimation from "../components/hero/newHero";
 
 export default function MainPage() {
   const [isMenuExpanded, setIsMenuExpanded] = useState(false);
@@ -17,16 +18,16 @@ export default function MainPage() {
     
   }
   return (
-    <>
-      {/* <NavBar expand={toggleExpantion} />
+    <main className="overflow-x-hidden">
+      {/* <NavBar expand={toggleExpantion} /> */}
       <MobileNavBar isExpanded={isMenuExpanded}/>
+      <HeroAnimation/>
       <Hero />
       <AboutUs/>
       <Projects/>
       <Services/>
       <Contact/>
-      <Footer /> */}
-      <GsapAnimation/>
-    </>
+      <Footer />
+    </main>
   );
 }
