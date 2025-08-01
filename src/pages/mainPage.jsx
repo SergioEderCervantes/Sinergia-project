@@ -7,6 +7,7 @@ import Projects from "../components/projects/projects";
 import Services from "../components/services/services";
 import Contact from "../components/contact/contact";
 import Footer from "../components/footer";
+import GsapAnimation from "../first-gsap-animation";
 
 export default function MainPage() {
   const [isMenuExpanded, setIsMenuExpanded] = useState(false);
@@ -17,14 +18,15 @@ export default function MainPage() {
   }
   return (
     <>
-      <NavBar expand={toggleExpantion} />
+      {/* <NavBar expand={toggleExpantion} />
       <MobileNavBar isExpanded={isMenuExpanded}/>
       <Hero />
       <AboutUs/>
       <Projects/>
       <Services/>
       <Contact/>
-      <Footer />
+      <Footer /> */}
+      <GsapAnimation/>
     </>
   );
 }
