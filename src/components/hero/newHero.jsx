@@ -1,34 +1,69 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import styles from "./newHero.module.css";
 
 gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroAnimation() {
+  const [active, setActive] = useState(true);
   const container = useRef();
-  const svg = useRef();
-  useGSAP(() => {
-    // gsap.to(svg.current, { scale: 100, duration: 3, delay: 2, ease: 'power3.in', x: 1200,transformOrigin: "center center"});
-  },{scope: container});
-  //   const { contextSafe } = useGSAP({ scope: container });
+  const image = useRef();
 
-  //   const handleClick = contextSafe(() => {
-  //   });
+  const toggleClass = () => setActive(!active);
+
+  const { contextSafe } = useGSAP(
+    () => {
+      gsap.fromTo(
+        image.current,
+        { "--stop": "5%" },
+        {
+          "--stop": "80%",
+          duration: 2,
+          ease: "power3.out",
+          onComplete: toggleClass,
+        },
+      );
+
+      gsap.fromTo(
+        image.current,
+        { "--stop": "80%" },
+        {
+          "--stop": "5%",
+          ease: "None",
+          scrollTrigger:{
+            trigger: image.current,
+            start: "center center",
+            end: "+=1000",
+            scrub: true,
+          }
+        },
+      );
+    },
+    { scope: container },
+  );
+  const scroll = contextSafe(() => {
+    gsap.fromTo(
+      image.current,
+      { "--stop": "80%" },
+      { "--stop": "5%", duration: 3, ease: "power3.out" },
+    );
+  });
 
   return (
     <section
       ref={container}
       id="heroAnimation"
-      className="flex h-screen w-full flex-col items-center justify-center bg-black overflow-hidden"
+      className="flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-white"
     >
-      {/* <button className="bg-white" onClick={handleClick}>click</button> */}
       <img
-        ref={svg}
-        className="w-1/3"
-        src="/isotipo_blanco.svg"
-        alt="isotipo"
+        ref={image}
+        className={`${active ? styles.fadeBottom : styles.fadeTop} w-full md:w-3/4 lg:w-1/2`}
+        src="/sinergia.png"
+        alt="logo"
       />
-      <h1 className="-mt-12 text-4xl text-shadow-white text-white">Sinergia Studio</h1>
     </section>
   );
 }

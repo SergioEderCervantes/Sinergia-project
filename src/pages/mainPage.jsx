@@ -19,7 +19,7 @@ export default function MainPage() {
   }
   return (
     <main className="overflow-x-hidden">
-      {/* <NavBar expand={toggleExpantion} /> */}
+      <NavBar expand={toggleExpantion} />
       <MobileNavBar isExpanded={isMenuExpanded}/>
       <HeroAnimation/>
       <Hero />
