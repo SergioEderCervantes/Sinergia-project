@@ -14,7 +14,7 @@ return (
             magnam eum veniam omnis necessitatibus.
         </p>
         <div className="img-container">
-            <div className=" bg-gunmetal text-gray-300  h-40 grid place-items-center">
+            <div className=" bg-gunmetal text-gray-300 aspect-video grid place-items-center">
                 <span>Image or video Placeholder</span>
                 {/* <img src="" alt="" /> */}
             </div>

@@ -50,3 +50,37 @@
 html{
   scroll-behavior: smooth;
 }
+
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+.link-underline:hover::after {
+  width: 100%;
+  right: 0;
+  left: auto;
+}
+
+.project-group:hover .project-item:not(:hover) {
+  transform: scale(0.85);
+  z-index: 0;
+  filter: grayscale(1);
+}
+.project-item {
+  z-index: 1;
+  filter: none;
+}
+.project-item:hover {
+  transform: scale(1.08);
+  z-index: 2;
+  filter: none;
+}
