@@ -37,6 +37,7 @@ export default function HeroAnimation() {
             trigger: image.current,
             start: "center center",
             end: "+=1000",
+            pin: true,
             scrub: true,
           }
         },
