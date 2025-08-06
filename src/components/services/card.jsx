@@ -1,5 +1,3 @@
-import Button from "../button";
-
 export default function Card({ icon: Icon, title }) {
 return (
     <div className="border-gunmetal/10 text-gunmetal bg-lavender-web mx-10 my-12 w-full rounded-2xl border p-4 sm:w-3/4 md:w-2/4 md:min-w-100 lg:w-1/4">

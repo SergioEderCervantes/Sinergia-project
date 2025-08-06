@@ -1,6 +1,6 @@
 import Card from "./card";
 import { BiBadge } from "react-icons/bi";
-export default function Services(props) {
+export default function Services() {
   return (
     <section id="services" className=" flex flex-col items-center py-5 xl:p-12">
       <h2 className="text-gunmetal-600 my-2 text-4xl">Our Services</h2>

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 
 export default function NavBar({ expand }) {

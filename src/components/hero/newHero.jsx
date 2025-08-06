@@ -14,7 +14,7 @@ export default function HeroAnimation() {
 
   const toggleClass = () => setActive(!active);
 
-  const { contextSafe } = useGSAP(
+  useGSAP(
     () => {
       gsap.fromTo(
         image.current,
@@ -45,13 +45,7 @@ export default function HeroAnimation() {
     },
     { scope: container },
   );
-  const scroll = contextSafe(() => {
-    gsap.fromTo(
-      image.current,
-      { "--stop": "80%" },
-      { "--stop": "5%", duration: 3, ease: "power3.out" },
-    );
-  });
+
 
   return (
     <section

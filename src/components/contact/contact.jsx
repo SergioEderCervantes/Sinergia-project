@@ -5,7 +5,6 @@ export default function Contact() {
   
   const handleSubmit = async (e)  =>{
     const webhookUrl = "http://localhost:5678/webhook/27649da8-d4e9-4a33-95a0-9ecddff68fbf"
-    const webhookTestUrl = "http://localhost:5678/webhook-test/27649da8-d4e9-4a33-95a0-9ecddff68fbf"
     e.preventDefault();
     
     const form = e.target;
