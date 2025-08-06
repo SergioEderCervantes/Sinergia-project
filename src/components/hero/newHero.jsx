@@ -21,7 +21,7 @@ export default function HeroAnimation() {
         { "--stop": "5%" },
         {
           "--stop": "80%",
-          duration: 2,
+          duration: 1,
           ease: "power3.out",
           onComplete: toggleClass,
         },

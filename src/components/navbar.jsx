@@ -6,7 +6,7 @@ export default function NavBar({ expand }) {
     <nav className="text-gunmetal-600 border-gunmetal-800 fixed bg-lavender-web-200 z-100 flex w-full items-center justify-between border-b p-8 lg:py-4">
       <a className="logo-y-titulo flex items-center gap-3" href="#">
         <img className="w-15" src="/isotipo.svg" alt="logo" />
-        <h1 className="text-3xl font-bold">SinergiaStudio</h1>
+        <h1 className="hidden sm:inline text-3xl font-bold">SinergiaStudio</h1>
       </a>
 
       <div className="navegacion hidden gap-3 text-lg font-semibold lg:flex">

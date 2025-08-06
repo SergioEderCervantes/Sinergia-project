@@ -14,11 +14,11 @@ export default function AboutUs() {
   const container = useRef();
   useGSAP(()=>{
     gsap.from(".about-card",{
-      y:300,
+      y:100,
       opacity: 0,
-      duration: 3,
-      ease: "power2.out",
-      stagger: 0.5,
+      duration: 1,
+      ease: "power1.out",
+      stagger: 0.2,
       scrollTrigger: {
         trigger: ".about-card",
         start: "top 80%"
