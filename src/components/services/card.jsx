@@ -13,12 +13,12 @@ return (
             consectetur, repellat, incidunt inventore enim numquam fugit quasi
             magnam eum veniam omnis necessitatibus.
         </p>
-        <ul className="my-4 space-y-2 list-disc list-inside pl-2 text-gunmetal/80">
-            <li className="px-3 hover:bg-lavender-web-300 transition-colors">Interesting thing 1</li>
-            <li className="px-3 hover:bg-lavender-web-300 transition-colors">Interesting thing 2</li>
-            <li className="px-3 hover:bg-lavender-web-300 transition-colors">Interesting thing 3</li>
-            <li className="px-3 hover:bg-lavender-web-300 transition-colors">Interesting thing 4</li>
-        </ul>
+        <div className="img-container">
+            <div className=" bg-gunmetal text-gray-300  h-40 grid place-items-center">
+                <span>Image or video Placeholder</span>
+                {/* <img src="" alt="" /> */}
+            </div>
+        </div>
         <button className="bg-lavender-web-300 mt-4 hover:bg-lavender-web-700 transition-colors w-full rounded-2xl px-8 py-2 text-xl font-semibold">
             Learn More
         </button>

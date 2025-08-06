@@ -24,7 +24,7 @@ export default function MainPage() {
       <Hero />
       <Carousel/>
       <AboutUs/>
-      <Projects/>
+      {/* <Projects/> */}
       <Services/>
       <Contact/>
       <Footer />

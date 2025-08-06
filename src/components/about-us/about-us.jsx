@@ -1,58 +1,34 @@
-import { MdGroups } from "react-icons/md";
-import { FaLightbulb } from "react-icons/fa6";
-import { GoGraph } from "react-icons/go";
-import AboutCard from "./about-us-card";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
-
-gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger);
+import Card from "./card";
 
 export default function AboutUs() {
-  const container = useRef();
-  useGSAP(()=>{
-    gsap.from(".about-card",{
-      y:100,
-      opacity: 0,
-      duration: 1,
-      ease: "power1.out",
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: ".about-card",
-        start: "top 80%"
-      }
-    });
-  }, {scope: container})
-
   return (
     <section id="about" className="flex flex-col items-center p-12">
       <h3 className="text-4xl">About Us</h3>
-      <p className="w-full md:w-1/2 text-center text-xl">
+      <p className="w-full text-center text-xl md:w-1/2">
         We're a dynamic marketing startup dedicated to helping buissnesses
         achieve extraordinary growtgh throught innovative strategies and
         data-driven solutions
       </p>
-      <div ref={container} className="my-8 flex w-full flex-wrap justify-around px-12">
-        <AboutCard
-          icon={FaLightbulb}
+      <div
+        
+        className="my-8 flex w-full flex-wrap justify-around"
+      >
+        <Card
           title={"Innovation"}
-          desc={
+          image={""}
+          description={
             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque"
           }
         />
-        <AboutCard
-          icon={GoGraph}
+        <Card
           title={"Results"}
-          desc={
+          description={
             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque"
           }
         />
-        <AboutCard
-          icon={MdGroups}
-          title={"Partnership"}
-          desc={
+        <Card
+          title={"PartnerShip"}
+          description={
             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque"
           }
         />
