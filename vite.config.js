@@ -9,5 +9,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/Sinergia-Project'
+  base: '/Sinergia-Project/'
 })
