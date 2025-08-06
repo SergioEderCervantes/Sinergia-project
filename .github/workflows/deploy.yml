@@ -40,3 +40,4 @@ jobs:
         with:
           branch: deploy
           folder: dist
+          clean: true
