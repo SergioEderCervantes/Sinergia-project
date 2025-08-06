@@ -3,10 +3,10 @@ name: Deploy Vite React to GitHub Pages
 on:
   push:
     branches:
-      - main # 👈 cada push a main dispara el deploy
+      - main
 
 permissions:
-  contents: write # necesario para poder subir a la rama deploy
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -15,6 +15,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Validate vite.config.js base path
+        run: |
+          EXPECTED_BASE="/Sinergia-project/"
+          if ! grep -q "base: '${EXPECTED_BASE}'" vite.config.js; then
+            echo "❌ vite.config.js base is incorrect. Expected: ${EXPECTED_BASE}"
+            exit 1
+          fi
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -30,5 +38,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: deploy  # 👈 rama de destino
-          folder: dist    # 👈 carpeta que genera Vite
+          branch: deploy
+          folder: dist
