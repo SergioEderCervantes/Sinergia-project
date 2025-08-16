@@ -90,9 +90,9 @@ export default function Carousel() {
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex h-full w-full flex-shrink-0 items-center justify-center text-2xl font-bold text-white"
+            className="flex w-full flex-shrink-0 items-center justify-center text-2xl font-bold text-white"
           >
-            <img src={item.img} alt={item.alt} className="w-full" />
+            <img src={item.img} alt={item.alt} className="w-full " />
           </div>
         ))}
       </div>

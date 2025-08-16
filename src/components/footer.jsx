@@ -1,6 +1,6 @@
 import { FaInstagram } from "react-icons/fa6";
 import { AiFillTikTok } from "react-icons/ai";
-import { FaLinkedin } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center justify-center gap-4 lg:justify-start">
             <img className="w-20" src="/isotipo.svg" alt="logo" />
-            <h4 className="text-2xl font-bold">MarketPro</h4>
+            <h4 className="text-2xl font-bold">Sinergia</h4>
           </div>
           <span>Elevating brand with strategic marketing solutions.</span>
         </div>
@@ -28,22 +28,31 @@ export default function Footer() {
         </div>
         <div className="hidden flex-col gap-1 font-semibold lg:flex">
           <h4 className="text-2xl font-bold">Connect</h4>
-          <div className="flex justify-start gap-2 text-lg">
-            <a href="#">
-              <AiFillTikTok className="cursor-pointer" />
-            </a>
-            <a href="#">
-              <FaInstagram className="cursor-pointer" />
-            </a>
-            <a href="#">
-              <FaLinkedin className="cursor-pointer" />
-            </a>
+          <div className="flex flex-col justify-start  text-lg ">
+            <div className="flex items-center gap-2 hover:underline">
+              <a href="https://www.instagram.com/sinergia.studio.mx?igsh=NjBkdmRmOGppM3py" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="cursor-pointer" />
+              </a>
+              <a className="pb-1" href="https://www.instagram.com/sinergia.studio.mx?igsh=NjBkdmRmOGppM3py" target="_blank" rel="noopener noreferrer">sinergia.studio.mx</a>
+            </div>
+            <div className="flex items-center gap-2 hover:underline -ml-[1px]">
+              <a href="https://www.tiktok.com/@sinergia.studio.mx?_t=ZS-8ynJynjDNas&_r=1" target="_blank" rel="noopener noreferrer">
+                <AiFillTikTok className="cursor-pointer text-xl" />
+              </a>
+              <a className="pb-1" href="https://www.tiktok.com/@sinergia.studio.mx?_t=ZS-8ynJynjDNas&_r=1" target="_blank" rel="noopener noreferrer">sinergia.studio.mx</a>
+            </div>
+            <div className="flex items-center gap-2 hover:underline">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <FaFacebookSquare className="cursor-pointer text-md"/>
+              </a>
+              <a className="pb-1" href="#" target="_blank" rel="noopener noreferrer">sinergia.studio.mx</a>
+            </div>
           </div>
         </div>
       </div>
       <hr className="border-lavender-web/80 my-4" />
       <div className="text-lavender-web/80 text-center">
-        <span>c 2025 MarketPro. All rights reserved </span>
+        <span>c 2025 Sinergia Studio. All rights reserved </span>
       </div>
     </footer>
   );
