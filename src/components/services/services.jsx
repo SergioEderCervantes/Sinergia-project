@@ -5,6 +5,7 @@ export default function Services() {
     services: [
       {
         title: "Gestión de redes sociales",
+        color: "#3B82F6",
         bullets: [
           "Estrategias de contenido personalizadas.",
           "Calendarización y publicación constante.",
@@ -14,6 +15,7 @@ export default function Services() {
       },
       {
         title: "Creación de contenido profesional",
+        color: "#EF4444",
         bullets: [
           "Fotografía y video para redes.",
           "Reels y TikToks con storytelling y tendencias.",
@@ -23,6 +25,7 @@ export default function Services() {
       },
       {
         title: "Branding y diseño gráfico",
+        color: "#FACC15",
         bullets: [
           "Diseño de logotipos y manuales de marca.",
           "Moodboards y paletas de color.",
@@ -32,6 +35,7 @@ export default function Services() {
       },
       {
         title: "Publicidad digital",
+        color: "#F97316",
         bullets: [
           "Campañas en Meta Ads, Google Ads y TikTok Ads.",
           "Segmentación, píxel y retargeting.",
@@ -40,6 +44,7 @@ export default function Services() {
       },
       {
         title: "Páginas web y sistemas",
+        color: "#1E3A8A",
         bullets: [
           "Desarrollo de sitios web responsivos.",
           "Tiendas en línea y plataformas de e-commerce.",
@@ -49,6 +54,7 @@ export default function Services() {
       },
       {
         title: "Estrategia y consultoría",
+        color: "#7C3AED",
         bullets: [
           "Estudios de mercado y competencia.",
           "Análisis de métricas y reportes detallados.",
@@ -71,8 +77,7 @@ export default function Services() {
           <Card
             key={idx}
             icon={BiBadge}
-            title={service.title}
-            bullets={service.bullets}
+            service= {service}
           />
         ))}
       </div>
