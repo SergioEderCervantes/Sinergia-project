@@ -1,0 +1,19 @@
+
+.linkUnderline {
+  position: relative;
+}
+.linkUnderline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+.linkUnderline:hover::after {
+  width: 100%;
+  right: 0;
+  left: auto;
+}

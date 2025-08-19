@@ -1,0 +1,14 @@
+.projectGroup:hover .projectItem:not(:hover) {
+  transform: scale(0.85);
+  z-index: 0;
+  filter: grayscale(1);
+}
+.projectItem {
+  z-index: 1;
+  filter: none;
+}
+.projectItem:hover {
+  transform: scale(1.08);
+  z-index: 2;
+  filter: none;
+}

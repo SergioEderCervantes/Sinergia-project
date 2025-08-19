@@ -27,12 +27,11 @@ export default function Contact() {
       <span className="text-gunmetal-600 w-full text-center text-xl md:w-1/2">
         Deja tu email y nosotros te contactamos.
       </span>
-      <div className="flex flex-col-reverse lg:flex-row w-full my-4">
-        <div className="img-container w-full lg:w-1/2 grid place-items-center">
-          <img src="https://placehold.co/400x400" alt="Img"/>
-          
+      <div className="my-4 flex w-full flex-col-reverse lg:flex-row">
+        <div className="img-container grid w-full place-items-center lg:w-1/2">
+          <img src="https://placehold.co/400x400" alt="Img" />
         </div>
-        <div className="mx-auto my-8 w-full max-w-lg rounded-md bg-white p-6 shadow-md">
+        <div className="mx-auto my-8 h-fit w-full max-w-lg rounded-md bg-white p-6 shadow-md">
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="text-gunmetal mb-1 block text-sm font-medium">

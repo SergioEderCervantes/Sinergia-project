@@ -1,16 +1,6 @@
-Remodelar los projects
-
-/ usar las cards de los projects en la parte de about us, con la animacion de about us
-
-La parte de servicios animarla bonito con un pinned Container, la verdad no se bien como
+TODOs:
 
 Quitar n8n de la jugada para el mandado de formulario
-
-/ Poner un hover en los links de la navbar para que esten mas lindos
-
-Ver si se puede pinnear la landpage y que cuando termine de hacer la desaparicion se haga un opacity 0 a lo demas
-
-No me gusta el aumento del tamaño de la fuente del footer
 
 Poner las redes en el header, cambiar estrategia de animacion
 
@@ -18,5 +8,14 @@ Poner una animacion o algo en el send Message
 
 Ver que hacer con la landpage
 
+Cambiar los colores a la nueva paleta, acomodar los colores en general
 
-Acomodar el css para que el index quede solo con las configuraciones de tailwind
+Agregar el nuevo logo y animarlo diferente, con morphsvg
+
+Actualizar navbar de movil y animarla
+
+poner imagenes
+
+terminar de traducir la pagina con cosas ya de verdad
+
+Llenar los proyectos

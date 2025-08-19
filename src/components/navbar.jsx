@@ -1,4 +1,6 @@
 import { BiMenu } from "react-icons/bi";
+import styles from "./navbar-footer.module.css";
+
 
 export default function NavBar({ expand }) {
   return (
@@ -9,19 +11,19 @@ export default function NavBar({ expand }) {
       </a>
 
       <div className="navegacion hidden gap-3 text-lg font-semibold lg:flex">
-        <a className="link-underline hover:text-teal" href="#">
+        <a className={`${styles.linkUnderline} hover:text-teal`} href="#">
           Inicio
         </a>
-        <a className="link-underline hover:text-teal" href="#about">
+        <a className={`${styles.linkUnderline} hover:text-teal`} href="#about">
           Nosotros
         </a>
-        <a className="link-underline hover:text-teal" href="#projects">
+        <a className={`${styles.linkUnderline} hover:text-teal`} href="#projects">
           Proyectos
         </a>
-        <a className="link-underline hover:text-teal" href="#services">
+        <a className={`${styles.linkUnderline} hover:text-teal`} href="#services">
           Servicios
         </a>
-        <a className="link-underline hover:text-teal" href="#contact">
+        <a className={`${styles.linkUnderline} hover:text-teal `} href="#contact">
           Contacto
         </a>
       </div>
