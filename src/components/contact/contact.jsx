@@ -3,20 +3,33 @@ import axios from "axios";
 export default function Contact() {
   const handleSubmit = async (e) => {
     const webhookUrl =
-      "http://localhost:5678/webhook/27649da8-d4e9-4a33-95a0-9ecddff68fbf";
+      "http://ntfy.sh/Sinergia";
     e.preventDefault();
 
     const form = e.target;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
+    const msg = formatMsg(data);
+    console.log(data);
 
     try {
-      const res = await axios.post(webhookUrl, data);
-      console.log(res.data);
+      const res = await axios.post(webhookUrl, msg);
     } catch (err) {
       console.log(err);
     }
   };
+
+
+  const formatMsg = (data) => {
+
+    let msg = `
+      Sinergia Web: Un usuario trata de contactarnos!!
+      Nombre: ${data.nombre}
+      Email: ${data.email}
+      Empresa: ${data.compania ? data.compania : "No especificada"}
+    `;
+    return msg;
+  }
 
   return (
     <section
