@@ -1,0 +1,30 @@
+
+.serviceCard {
+  position: relative;
+  z-index: 0;
+  max-width: 350px;
+  transition: color 0.5s ease-out;
+}
+.serviceCard:hover{
+  color: white;
+}
+.serviceCard:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: var(--service-color);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.5s ease-out;
+}
+
+.serviceCard:hover:before {
+  transform: scale(35);
+}
+
+

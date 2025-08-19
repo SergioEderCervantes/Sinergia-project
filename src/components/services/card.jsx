@@ -1,25 +1,39 @@
-export default function Card({ icon: Icon, title }) {
-return (
-    <div className="border-gunmetal/10 text-gunmetal bg-lavender-web mx-10 my-12 w-full rounded-2xl border p-4 sm:w-3/4 md:w-2/4 md:min-w-100 lg:w-1/4">
-        <div className="icon-container bg-gunmetal -mt-12 mb-4 aspect-square w-15 rounded-2xl grid place-items-center">
-            <Icon className="text-white text-4xl" />
+import styles from "./card.module.css";
+
+export default function Card({ icon: Icon, service }) {
+  return (
+    <div
+      className={`${styles.serviceCard} bg-lavender-web-300 m-3 block h-fit overflow-hidden rounded-2xl px-4 `}
+      style={{
+        "--service-color": service.color,
+      }}
+    >
+      <div className="flex justify-end">
+        <div
+          className="-mt-5 -mr-9 flex size-16 items-end justify-start rounded-full p-2"
+          style={{
+            background: service.color,
+          }}
+        >
+          <Icon className="text-4xl text-white" />
         </div>
-        <h4 className="text-xl font-semibold my-4">{title}</h4>
-        <p className="my-4">
-            Description Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Nemo, sed repellendus quod tenetur animi expedita blanditiis facere
-            consectetur, repellat, incidunt inventore enim numquam fugit quasi
-            magnam eum veniam omnis necessitatibus.
-        </p>
-        <div className="img-container">
-            <div className=" bg-gunmetal text-gray-300 aspect-video grid place-items-center">
-                <span>Image or video Placeholder</span>
-                {/* <img src="" alt="" /> */}
-            </div>
-        </div>
-        <button className="bg-lavender-web-300 mt-4 hover:bg-lavender-web-700 transition-colors w-full rounded-2xl px-8 py-2 text-xl font-semibold">
-            Learn More
-        </button>
+      </div>
+      <div className="flex flex-col justify-evenly h-full">
+        <h4 className="text-center text-2xl font-semibold">{service.title}</h4>
+
+        <ul className="my-4 space-y-2">
+          {service.bullets.map((item, idx) => {
+            return (
+              <li
+                key={idx}
+                className="rounded-lg bg-white/70 px-1 py-2 text-gray-700 shadow-sm"
+              >
+                <span>{item}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
-);
+  );
 }

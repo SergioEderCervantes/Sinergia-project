@@ -1,5 +1,5 @@
-import Card from "./cardv1";
 import { BiBadge } from "react-icons/bi";
+import Card from "./card";
 export default function Services() {
   const ourServices = {
     services: [
@@ -81,6 +81,8 @@ export default function Services() {
           />
         ))}
       </div>
+   
+
     </section>
   );
 }
