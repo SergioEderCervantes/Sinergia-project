@@ -2,6 +2,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,12 +37,7 @@ export default function Card({ title, image, description }) {
         ref={imgContainer}
         className="img-container grid aspect-square origin-bottom place-items-center bg-gray-600"
       >
-        {/* <img src="{image}" alt="Img" /> */}
-        <span className="text-xl text-white">Image placeholder</span>
-      </div>
-      <div className="info flex flex-col justify-evenly p-4 text-center">
-        <h4 className="text-xl font-semibold">{title}</h4>
-        <p className="text-sm">{description}</p>
+        <LazyLoadImage src={`${import.meta.env.BASE_URL}abt/${image}`} alt="Img" effect="blur"/>
       </div>
     </div>
   );

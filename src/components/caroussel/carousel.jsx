@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 gsap.registerPlugin(useGSAP);
 export default function Carousel() {
@@ -14,10 +16,9 @@ export default function Carousel() {
   const deltaX = useRef(0);
   const autoPlayTime = 3000;
   const items = [
-    { name: "Slide 1", img: "https://placehold.co/1400x400", alt: "Imagen 1" },
-    { name: "Slide 2", img: "https://placehold.co/1400x400", alt: "Imagen 2" },
-    { name: "Slide 3", img: "https://placehold.co/1400x400", alt: "Imagen 3" },
-    { name: "Slide 4", img: "https://placehold.co/1400x400", alt: "Imagen 4" },
+    { name: "Slide 1", img: "/carr/carr1.jpg", alt: "Imagen 1" },
+    { name: "Slide 2", img: "/carr/carr2.jpg", alt: "Imagen 2" },
+    { name: "Slide 3", img: "/carr/carr3.jpg", alt: "Imagen 3" },
   ];
 
   // 🔹 GSAP animación en cada cambio de slide
@@ -71,7 +72,9 @@ export default function Carousel() {
 
   return (
     <div
-      className="relative mx-auto w-full overflow-hidden select-none xl:h-[60vh]"
+    // INFO aqui si quieres cambiar el tamaño del carrusel, cambia el w, si las imagenes son mas 
+    // largas, es decir no son 16:9, quita el aspect video
+      className="relative mx-auto  overflow-hidden select-none w-3/5 aspect-video "
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onMouseDown={handleMouseDown}
@@ -84,15 +87,20 @@ export default function Carousel() {
       {/* Contenedor slides */}
       <div
         ref={containerRef}
-        className="flex transition-transform duration-500 ease-in-out"
+        className="flex transition-transform duration-500 ease-in-out "
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex w-full flex-shrink-0 items-center justify-center text-2xl font-bold text-white"
+            className="flex w-full flex-shrink-0  items-center justify-center text-2xl font-bold text-white"
           >
-            <img src={item.img} alt={item.alt} className="w-full " />
+            <LazyLoadImage
+              src={`${import.meta.env.BASE_URL}${item.img}`}
+              alt={item.alt}
+              className="w-full "
+              effect="blur"
+            />
           </div>
         ))}
       </div>

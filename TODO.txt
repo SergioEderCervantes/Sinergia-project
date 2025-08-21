@@ -1,12 +1,9 @@
 TODOs:
 
-Poner las redes en el header, cambiar estrategia de animacion
 
-Ver que hacer con la landpage
 
 Cambiar los colores a la nueva paleta, acomodar los colores en general
 
-Agregar el nuevo logo y animarlo diferente, con morphsvg
 
 Actualizar navbar de movil y animarla
 
@@ -15,3 +12,12 @@ poner imagenes
 terminar de traducir la pagina con cosas ya de verdad
 
 Llenar los proyectos
+
+
+pa la v2:
+
+Agregar el nuevo logo y animarlo diferente, con morphsvg
+Ver que hacer con la landpage
+Poner las redes en el header, cambiar estrategia de animacion
+
+limpiar assets y public, poner cosas en su lugar omaiga

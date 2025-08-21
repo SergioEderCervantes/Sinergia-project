@@ -9,29 +9,10 @@ export default function AboutUs() {
         achieve extraordinary growtgh throught innovative strategies and
         data-driven solutions
       </p>
-      <div
-        
-        className="my-8 flex w-full flex-wrap justify-around"
-      >
-        <Card
-          title={"Innovation"}
-          image={""}
-          description={
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque"
-          }
-        />
-        <Card
-          title={"Results"}
-          description={
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque"
-          }
-        />
-        <Card
-          title={"PartnerShip"}
-          description={
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque"
-          }
-        />
+      <div className="my-8 flex w-full flex-wrap justify-around">
+        <Card image={"abt1.jpg"} />
+        <Card image={"abt2.jpg"}/>
+        <Card image={"abt3.jpg"}/>
       </div>
     </section>
   );
