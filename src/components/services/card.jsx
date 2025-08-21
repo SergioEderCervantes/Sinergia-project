@@ -26,7 +26,7 @@ export default function Card({ icon: Icon, service }) {
             return (
               <li
                 key={idx}
-                className="rounded-lg bg-white/70 px-1 py-2 text-gray-700 shadow-sm"
+                className="rounded-lg bg-white/70 px-1 py-2 text-gray-700 shadow-sm"                
               >
                 <span>{item}</span>
               </li>
