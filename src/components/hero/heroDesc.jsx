@@ -32,7 +32,7 @@ export default function HeroDesc() {
       <h2 className="text-gunmetal-600 animation my-2">Elevate your Brand</h2>
       <img
         className="animation my-8 w-1/4 xl:hidden"
-        src="/isotipo.svg"
+        src={`${import.meta.env.BASE_URL}isotipo.svg`}
         alt="logo"
       />
       <h2 className="animation my-2">With Strategic Marketing</h2>

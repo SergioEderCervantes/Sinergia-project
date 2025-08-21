@@ -56,7 +56,7 @@ export default function HeroAnimation() {
       <img
         ref={image}
         className={`${active ? styles.fadeBottom : styles.fadeTop} w-full md:w-3/4 lg:w-1/2`}
-        src="/sinergia.png"
+        src={`${import.meta.env.BASE_URL}isotipo.svg`}
         alt="logo"
       />
     </section>

@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="flex w-full justify-around text-white">
         <div>
           <div className="flex items-center justify-center gap-4 lg:justify-start">
-            <img className="w-20" src="/isotipo.svg" alt="logo" />
+            <img className="w-20" src={`${import.meta.env.BASE_URL}isotipo.svg`} alt="logo" />
             <h4 className="text-2xl font-bold">Sinergia</h4>
           </div>
           <span>Elevating brand with strategic marketing solutions.</span>
