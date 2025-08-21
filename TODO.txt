@@ -1,10 +1,6 @@
 TODOs:
 
-Quitar n8n de la jugada para el mandado de formulario
-
 Poner las redes en el header, cambiar estrategia de animacion
-
-Poner una animacion o algo en el send Message
 
 Ver que hacer con la landpage
 

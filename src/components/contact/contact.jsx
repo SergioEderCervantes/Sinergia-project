@@ -1,9 +1,12 @@
 import axios from "axios";
+import { useState } from "react";
 
 export default function Contact() {
+  const [sendText, setSendText] = useState(false);
+
   const handleSubmit = async (e) => {
-    const webhookUrl =
-      "http://ntfy.sh/Sinergia";
+    setSendText(true);
+    const webhookUrl = "http://ntfy.sh/Sinergia";
     e.preventDefault();
 
     const form = e.target;
@@ -17,11 +20,11 @@ export default function Contact() {
     } catch (err) {
       console.log(err);
     }
+    
+    setTimeout(() => setSendText(false), 4000);
   };
 
-
   const formatMsg = (data) => {
-
     let msg = `
       Sinergia Web: Un usuario trata de contactarnos!!
       Nombre: ${data.nombre}
@@ -29,7 +32,7 @@ export default function Contact() {
       Empresa: ${data.compania ? data.compania : "No especificada"}
     `;
     return msg;
-  }
+  };
 
   return (
     <section
@@ -83,13 +86,15 @@ export default function Contact() {
                 />
               </div>
             </div>
-            <div className="text-center">
+            <div className="text-center flex flex-col">
               <button
                 type="submit"
                 className="bg-gunmetal hover:bg-teal rounded-md px-6 py-2 text-white transition duration-200"
               >
                 Enviar
               </button>
+
+              <span className={`${(sendText ? "opacity-100" : "opacity-0")} ml-4 text-green-600 transition-all duration-500`}>¡Mensaje enviado!</span>
             </div>
           </form>
         </div>
