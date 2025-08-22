@@ -4,6 +4,15 @@ export default function Services() {
   const ourServices = {
     services: [
       {
+        title: "Publicidad digital",
+        color: "#F97316",
+        bullets: [
+          "Campañas en Meta Ads, Google Ads y TikTok Ads.",
+          "Segmentación, píxel y retargeting.",
+          "Optimización para ROI positivo.",
+        ],
+      },
+      {
         title: "Gestión de redes sociales",
         color: "#3B82F6",
         bullets: [
@@ -11,16 +20,6 @@ export default function Services() {
           "Calendarización y publicación constante.",
           "Optimización de perfiles para mayor alcance.",
           "Monitoreo e interacción con la comunidad.",
-        ],
-      },
-      {
-        title: "Creación de contenido profesional",
-        color: "#EF4444",
-        bullets: [
-          "Fotografía y video para redes.",
-          "Reels y TikToks con storytelling y tendencias.",
-          "Producción y edición de videos publicitarios.",
-          "Motion graphics y animaciones simples.",
         ],
       },
       {
@@ -34,12 +33,13 @@ export default function Services() {
         ],
       },
       {
-        title: "Publicidad digital",
-        color: "#F97316",
+        title: "Estrategia y consultoría",
+        color: "#7C3AED",
         bullets: [
-          "Campañas en Meta Ads, Google Ads y TikTok Ads.",
-          "Segmentación, píxel y retargeting.",
-          "Optimización para ROI positivo.",
+          "Estudios de mercado y competencia.",
+          "Análisis de métricas y reportes detallados.",
+          "Propuestas de mejora y tendencias aplicables.",
+          "Capacitación a empresas y equipos.",
         ],
       },
       {
@@ -53,13 +53,13 @@ export default function Services() {
         ],
       },
       {
-        title: "Estrategia y consultoría",
-        color: "#7C3AED",
+        title: "Creación de contenido profesional",
+        color: "#EF4444",
         bullets: [
-          "Estudios de mercado y competencia.",
-          "Análisis de métricas y reportes detallados.",
-          "Propuestas de mejora y tendencias aplicables.",
-          "Capacitación a empresas y equipos.",
+          "Fotografía y video para redes.",
+          "Reels y TikToks con storytelling y tendencias.",
+          "Producción y edición de videos publicitarios.",
+          "Motion graphics y animaciones simples.",
         ],
       },
     ],
@@ -72,17 +72,11 @@ export default function Services() {
         Soluciones integrales de marketing diseñadas para escalar tu negocio y
         maximizar tu impacto en el mercado
       </span>
-      <div className="flex w-10/12 gap-4 flex-wrap justify-evenly">
+      <div className="flex w-10/12 flex-wrap justify-evenly gap-4">
         {ourServices.services.map((service, idx) => (
-          <Card
-            key={idx}
-            icon={BiBadge}
-            service= {service}
-          />
+          <Card key={idx} icon={BiBadge} service={service} />
         ))}
       </div>
-   
-
     </section>
   );
 }

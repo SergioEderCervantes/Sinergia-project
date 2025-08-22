@@ -29,14 +29,16 @@ export default function HeroDesc() {
       ref={container}
       className="xlg:text-justify flex flex-col items-center px-16 text-center text-5xl text-gray-500 xl:w-4/6"
     >
-      <h2 className="text-gunmetal-600 animation my-2">Elevate your Brand</h2>
+      <h2 className="text-gunmetal-600 animation my-2 xl:text-8xl">
+        Elevate your Brand
+      </h2>
       <img
-        className="animation my-8 w-1/4 xl:hidden"
+        className="animation my-8 w-1/4  xl:hidden"
         src={`${import.meta.env.BASE_URL}isotipo.svg`}
         alt="logo"
       />
-      <h2 className="animation my-2">With Strategic Marketing</h2>
-      <p className="animation my-8 hidden text-justify text-lg font-semibold md:block">
+      <h2 className="animation text-3xl xl:text-4xl my-2">With Strategic Marketing</h2>
+      <p className="animation  hidden text-justify text-lg font-semibold md:block px-2">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quae
         deleniti, aperiam pariatur illo voluptate ab fugiat excepturi non?
         Tenetur doloremque, aliquid quasi odit cupiditate dicta neque sapiente

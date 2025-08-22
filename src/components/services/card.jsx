@@ -3,7 +3,7 @@ import styles from "./card.module.css";
 export default function Card({ icon: Icon, service }) {
   return (
     <div
-      className={`${styles.serviceCard} bg-lavender-web-300 m-3 block h-fit overflow-hidden rounded-2xl px-4 `}
+      className={`${styles.serviceCard} bg-lavender-web-300 m-3 block  overflow-hidden rounded-2xl px-4 `}
       style={{
         "--service-color": service.color,
       }}
@@ -18,7 +18,7 @@ export default function Card({ icon: Icon, service }) {
           <Icon className="text-4xl text-white" />
         </div>
       </div>
-      <div className="flex flex-col justify-evenly h-full">
+      <div className="flex flex-col justify-evenly ">
         <h4 className="text-center text-2xl font-semibold">{service.title}</h4>
 
         <ul className="my-4 space-y-2">

@@ -6,9 +6,28 @@
 .projectItem {
   z-index: 1;
   filter: none;
+
 }
 .projectItem:hover {
   transform: scale(1.08);
   z-index: 2;
   filter: none;
+
+}
+.projectItem img{
+  transition: filter 0.3s ease-out;
+}
+.projectItem:hover img{
+  filter: blur(5px);
+}
+.projectItem .text {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  /* -webkit-text-stroke: 1px #000; */
+  color: #fff;
+  
+}
+.projectItem:hover .text{
+  opacity: 1;
+  z-index: 3;
 }

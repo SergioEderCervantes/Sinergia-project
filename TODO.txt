@@ -1,11 +1,6 @@
 TODOs:
 
-
-
 Cambiar los colores a la nueva paleta, acomodar los colores en general
-
-
-Actualizar navbar de movil y animarla
 
 poner imagenes
 
@@ -13,6 +8,7 @@ terminar de traducir la pagina con cosas ya de verdad
 
 Llenar los proyectos
 
+Responsive general (carrusel sobretodo)
 
 pa la v2:
 
@@ -21,3 +17,7 @@ Ver que hacer con la landpage
 Poner las redes en el header, cambiar estrategia de animacion
 
 limpiar assets y public, poner cosas en su lugar omaiga
+
+Ver el mejor layout para el carrusel, maybe lo mejor es quitar la navbar en el hero y en el carrusel y que aparezca despues de esos
+
+Quitar el about us y ponerlo como carrusel de movil

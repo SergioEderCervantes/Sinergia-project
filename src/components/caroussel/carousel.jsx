@@ -16,9 +16,9 @@ export default function Carousel() {
   const deltaX = useRef(0);
   const autoPlayTime = 3000;
   const items = [
-    { name: "Slide 1", img: "/carr/carr1.jpg", alt: "Imagen 1" },
     { name: "Slide 2", img: "/carr/carr2.jpg", alt: "Imagen 2" },
     { name: "Slide 3", img: "/carr/carr3.jpg", alt: "Imagen 3" },
+    { name: "Slide 1", img: "/carr/carr1.jpg", alt: "Imagen 1" },
   ];
 
   // 🔹 GSAP animación en cada cambio de slide
@@ -74,7 +74,7 @@ export default function Carousel() {
     <div
     // INFO aqui si quieres cambiar el tamaño del carrusel, cambia el w, si las imagenes son mas 
     // largas, es decir no son 16:9, quita el aspect video
-      className="relative mx-auto  overflow-hidden select-none w-3/5 aspect-video "
+      className="relative mx-auto  overflow-hidden select-none w-full aspect-3/1"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onMouseDown={handleMouseDown}
@@ -93,12 +93,12 @@ export default function Carousel() {
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex w-full flex-shrink-0  items-center justify-center text-2xl font-bold text-white"
+            className="flex w-full flex-shrink-0 justify-center text-2xl font-bold text-white"
           >
             <LazyLoadImage
               src={`${import.meta.env.BASE_URL}${item.img}`}
               alt={item.alt}
-              className="w-full "
+              className="w-full"
               effect="blur"
             />
           </div>
@@ -120,19 +120,6 @@ export default function Carousel() {
       >
         <IoIosArrowForward className="text-2xl" />
       </button>
-
-      {/* Paginación (dots) */}
-      <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 gap-2 sm:flex">
-        {items.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`h-3 w-3 cursor-pointer rounded-full transition-colors ${
-              index === currentIndex ? "bg-white" : "bg-white/50"
-            }`}
-          ></button>
-        ))}
-      </div>
     </div>
   );
 }
