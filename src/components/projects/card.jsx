@@ -8,7 +8,7 @@ export default function Card({ title, image, description, label }) {
       <div className="info flex h-1/2 flex-col justify-between p-4">
         <h4 className="text-xl font-semibold">{title}</h4>
         <p className="text-sm">{description}</p>
-        <span className="bg-teal-500 w-fit rounded-full px-4 py-1 font-semibold text-white">
+        <span className="bg-tercero-500 w-fit rounded-full px-4 py-1 font-semibold text-white">
           {label}
         </span>
       </div>

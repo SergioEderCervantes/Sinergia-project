@@ -36,25 +36,39 @@ export default function MobileNavBar({ isExpanded, setIsExpanded }) {
       ref={container}
       className={`border-gunmetal fixed top-30 left-1/2 z-10 flex max-h-0 w-full -translate-x-1/2 transform flex-col items-center overflow-hidden bg-white text-3xl transition-all duration-1000 ${isExpanded ? "max-h-100 border-b" : ""}`}
     >
-      <a onClick={handleClick} className="hover:text-gunmetal-400 my-3 font-semibold" href="#">
+      <a
+        onClick={handleClick}
+        className="active:text-shock-pink transition-colors my-3 font-semibold"
+        href="#"
+      >
         Home
       </a>
-      <a onClick={handleClick} className="hover:text-gunmetal-400 my-3 font-semibold" href="#about">
+      <a
+        onClick={handleClick}
+        className="active:text-shock-pink transition-colors my-3 font-semibold"
+        href="#about"
+      >
         About
       </a>
       <a
-onClick={handleClick}         className="hover:text-gunmetal-400 my-3 font-semibold"
+        onClick={handleClick}
+        className="active:text-shock-pink transition-colors my-3 font-semibold"
         href="#projects"
       >
         Projects
       </a>
       <a
-onClick={handleClick}         className="hover:text-gunmetal-400 my-3 font-semibold"
+        onClick={handleClick}
+        className="active:text-shock-pink transition-colors my-3 font-semibold"
         href="#services"
       >
         Services
       </a>
-      <a onClick={handleClick} className="hover:text-gunmetal-400 my-3 font-semibold" href="#contact">
+      <a
+        onClick={handleClick}
+        className="active:text-shock-pink transition-colors my-3 font-semibold"
+        href="#contact"
+      >
         Contact
       </a>
     </nav>

@@ -17,7 +17,7 @@ return (
                 {/* <img src="" alt="" /> */}
             </div>
         </div>
-        <button className="bg-lavender-web-300 mt-4 hover:bg-lavender-web-700 transition-colors w-full rounded-2xl px-8 py-2 text-xl font-semibold">
+        <button className="bg-lavender-web/60 mt-4 hover:bg-lavender-web transition-colors w-full rounded-2xl px-8 py-2 text-xl font-semibold">
             Learn More
         </button>
     </div>

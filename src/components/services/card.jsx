@@ -3,7 +3,7 @@ import styles from "./card.module.css";
 export default function Card({ icon: Icon, service }) {
   return (
     <div
-      className={`${styles.serviceCard} bg-lavender-web-300 m-3 block  overflow-hidden rounded-2xl px-4 `}
+      className={`${styles.serviceCard} bg-lavender-web m-3 block overflow-hidden rounded-2xl px-4 `}
       style={{
         "--service-color": service.color,
       }}

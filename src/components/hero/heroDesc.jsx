@@ -29,7 +29,7 @@ export default function HeroDesc() {
       ref={container}
       className="xlg:text-justify flex flex-col items-center px-16 text-center text-5xl text-gray-500 xl:w-4/6"
     >
-      <h2 className="text-gunmetal-600 animation my-2 xl:text-8xl">
+      <h2 className="text-gunmetal animation my-2 xl:text-8xl">
         Elevate your Brand
       </h2>
       <img

@@ -2,13 +2,14 @@ TODOs:
 
 Cambiar los colores a la nueva paleta, acomodar los colores en general
 
+Responsive general (carrusel sobretodo)
+
+
 poner imagenes
 
 terminar de traducir la pagina con cosas ya de verdad
 
 Llenar los proyectos
-
-Responsive general (carrusel sobretodo)
 
 pa la v2:
 

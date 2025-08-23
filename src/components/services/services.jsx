@@ -5,7 +5,7 @@ export default function Services() {
     services: [
       {
         title: "Publicidad digital",
-        color: "#F97316",
+        color: "var(--color-tercero)",
         bullets: [
           "Campañas en Meta Ads, Google Ads y TikTok Ads.",
           "Segmentación, píxel y retargeting.",
@@ -14,7 +14,7 @@ export default function Services() {
       },
       {
         title: "Gestión de redes sociales",
-        color: "#3B82F6",
+        color: "var(--color-shock-pink)",
         bullets: [
           "Estrategias de contenido personalizadas.",
           "Calendarización y publicación constante.",
@@ -24,7 +24,7 @@ export default function Services() {
       },
       {
         title: "Branding y diseño gráfico",
-        color: "#FACC15",
+        color: "var(--color-tercero)",
         bullets: [
           "Diseño de logotipos y manuales de marca.",
           "Moodboards y paletas de color.",
@@ -34,7 +34,7 @@ export default function Services() {
       },
       {
         title: "Estrategia y consultoría",
-        color: "#7C3AED",
+        color: "var(--color-shock-pink)",
         bullets: [
           "Estudios de mercado y competencia.",
           "Análisis de métricas y reportes detallados.",
@@ -44,7 +44,7 @@ export default function Services() {
       },
       {
         title: "Páginas web y sistemas",
-        color: "#1E3A8A",
+        color: "var(--color-tercero)",
         bullets: [
           "Desarrollo de sitios web responsivos.",
           "Tiendas en línea y plataformas de e-commerce.",
@@ -54,7 +54,7 @@ export default function Services() {
       },
       {
         title: "Creación de contenido profesional",
-        color: "#EF4444",
+        color: "var(--color-shock-pink)",
         bullets: [
           "Fotografía y video para redes.",
           "Reels y TikToks con storytelling y tendencias.",
@@ -66,9 +66,9 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="flex flex-col items-center py-5 xl:p-12">
-      <h2 className="text-gunmetal-600 my-2 text-4xl">Nuestros Servicios</h2>
-      <span className="text-gunmetal-600 w-full text-center text-xl md:w-1/2">
+    <section id="services" className="flex flex-col items-center  py-5 xl:p-12">
+      <h2 className="text-gunmetal font-semibold my-2 text-4xl">Nuestros Servicios</h2>
+      <span className="text-gunmetal font-semibold w-full text-center text-xl md:w-1/2">
         Soluciones integrales de marketing diseñadas para escalar tu negocio y
         maximizar tu impacto en el mercado
       </span>

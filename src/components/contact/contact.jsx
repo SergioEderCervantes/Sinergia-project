@@ -37,10 +37,10 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-lavender-web-200 flex flex-col items-center py-5 xl:p-12"
+      className="bg-lavender-web flex flex-col items-center py-5 xl:p-12"
     >
-      <h2 className="text-gunmetal-600 my-2 text-4xl">¡Trabajemos juntos!</h2>
-      <span className="text-gunmetal-600 w-full text-center text-xl md:w-1/2">
+      <h2 className="text-gunmetal font-semibold my-2 text-4xl">¡Trabajemos juntos!</h2>
+      <span className="text-gunmetal font-semibold w-full text-center text-xl md:w-1/2">
         Deja tu email y nosotros te contactamos.
       </span>
       <div className="my-4 flex w-full flex-col-reverse lg:flex-row">
@@ -89,7 +89,7 @@ export default function Contact() {
             <div className="text-center flex flex-col">
               <button
                 type="submit"
-                className="bg-gunmetal hover:bg-teal rounded-md px-6 py-2 text-white transition duration-200"
+                className="bg-gunmetal hover:bg-shock-pink rounded-md px-6 py-2 text-white transition duration-200"
               >
                 Enviar
               </button>
