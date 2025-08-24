@@ -20,7 +20,7 @@ export default function HeroAnimation() {
         image.current,
         { "--stop": "5%" },
         {
-          "--stop": "80%",
+          "--stop": "100%",
           duration: 1,
           ease: "power3.out",
           onComplete: toggleClass,
@@ -29,14 +29,14 @@ export default function HeroAnimation() {
 
       gsap.fromTo(
         image.current,
-        { "--stop": "80%" },
+        { "--stop": "100%" },
         {
           "--stop": "5%",
           ease: "None",
           scrollTrigger:{
             trigger: image.current,
             start: "center center",
-            end: "+=1000",
+            end: "+=550",
             pin: true,
             scrub: true,
           }
@@ -56,7 +56,7 @@ export default function HeroAnimation() {
       <img
         ref={image}
         className={`${active ? styles.fadeBottom : styles.fadeTop} w-full md:w-3/4 lg:w-1/2`}
-        src={`${import.meta.env.BASE_URL}sinergia.png`}
+        src={`${import.meta.env.BASE_URL}logotipo_gunmetal.svg`}
         alt="logo"
       />
     </section>
