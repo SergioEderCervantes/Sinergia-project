@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Contact() {
   const [sendText, setSendText] = useState(false);
@@ -20,7 +21,7 @@ export default function Contact() {
     } catch (err) {
       console.log(err);
     }
-    
+
     setTimeout(() => setSendText(false), 4000);
   };
 
@@ -39,13 +40,19 @@ export default function Contact() {
       id="contact"
       className="bg-lavender-web flex flex-col items-center py-5 xl:p-12"
     >
-      <h2 className="text-gunmetal font-semibold my-2 text-4xl">¡Trabajemos juntos!</h2>
-      <span className="text-gunmetal font-semibold w-full text-center text-xl md:w-1/2">
+      <h2 className="text-gunmetal my-2 text-4xl font-semibold">
+        ¡Trabajemos juntos!
+      </h2>
+      <span className="text-gunmetal w-full text-center text-xl font-semibold md:w-1/2">
         Deja tu email y nosotros te contactamos.
       </span>
-      <div className="my-4 flex w-full flex-col-reverse lg:flex-row">
-        <div className="img-container grid w-full place-items-center lg:w-1/2">
-          <img src="https://placehold.co/400x400" alt="Img" />
+      <div className="my-4 flex w-full flex-col-reverse lg:flex-row lg:items-center">
+        <div className="img-container grid aspect-4/3 w-full place-items-center lg:w-5/12 lg:mx-8 ">
+          <LazyLoadImage 
+          
+            src={`${import.meta.env.BASE_URL}contacto.jpg`}
+            alt="Imagen de contacto, ilustración decorativa"
+          />
         </div>
         <div className="mx-auto my-8 h-fit w-full max-w-lg rounded-md bg-white p-6 shadow-md">
           <form className="space-y-4" onSubmit={handleSubmit}>
@@ -86,7 +93,7 @@ export default function Contact() {
                 />
               </div>
             </div>
-            <div className="text-center flex flex-col">
+            <div className="flex flex-col text-center">
               <button
                 type="submit"
                 className="bg-gunmetal hover:bg-shock-pink rounded-md px-6 py-2 text-white transition duration-200"
@@ -94,7 +101,11 @@ export default function Contact() {
                 Enviar
               </button>
 
-              <span className={`${(sendText ? "opacity-100" : "opacity-0")} ml-4 text-green-600 transition-all duration-500`}>¡Mensaje enviado!</span>
+              <span
+                className={`${sendText ? "opacity-100" : "opacity-0"} ml-4 text-green-600 transition-all duration-500`}
+              >
+                ¡Mensaje enviado!
+              </span>
             </div>
           </form>
         </div>

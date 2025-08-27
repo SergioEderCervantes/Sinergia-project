@@ -6,8 +6,8 @@ export default function NavBar({ expand }) {
   return (
     <nav className="text-gunmetal border-gunmetal fixed bg-lavender-web z-100 flex w-full items-center justify-between border-b px-2 lg:py-4">
       <a className="logo-y-titulo flex items-center gap-3" href="#">
-        <img className="w-15" src={`${import.meta.env.BASE_URL}isotipo.svg`} alt="logo" />
-        <h1 className="hidden sm:inline text-3xl font-bold">SinergiaStudio</h1>
+  <img className="w-15" src={`${import.meta.env.BASE_URL}isotipo.svg`} alt="Logotipo de Sinergia Studio" />
+        <h2 className="hidden sm:inline text-3xl font-bold">SinergiaStudio</h2>
       </a>
 
       <div className="navegacion hidden gap-3 text-lg font-semibold lg:flex">

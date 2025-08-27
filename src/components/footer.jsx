@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="flex w-full justify-around text-white">
         <div>
           <div className="flex items-center justify-center gap-4 lg:justify-start">
-            <img className="w-20" src={`${import.meta.env.BASE_URL}isotipo_azul_claro.svg`} alt="logo" />
+            <img className="w-20" src={`${import.meta.env.BASE_URL}isotipo_azul_claro.svg`} alt="Logotipo de Sinergia Studio en azul claro" />
             <h4 className="text-2xl font-bold">Sinergia</h4>
           </div>
           <span>Elevating brand with strategic marketing solutions.</span>
@@ -31,19 +31,19 @@ export default function Footer() {
           <h4 className="text-2xl font-bold">Connect</h4>
           <div className="flex flex-col justify-start  text-lg ">
             <div className={`${styles.linkUnderline} hover:text-tercero flex items-center gap-2`}>
-              <a href="https://www.instagram.com/sinergia.studio.mx?igsh=NjBkdmRmOGppM3py" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/sinergia.studio.mx?igsh=NjBkdmRmOGppM3py" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Sinergia Studio">
                 <FaInstagram className="cursor-pointer" />
               </a>
               <a className="pb-1" href="https://www.instagram.com/sinergia.studio.mx?igsh=NjBkdmRmOGppM3py" target="_blank" rel="noopener noreferrer">sinergia.studio.mx</a>
             </div>
             <div className={`${styles.linkUnderline} hover:text-tercero flex items-center gap-2 -ml-[1px]`}>
-              <a href="https://www.tiktok.com/@sinergia.studio.mx?_t=ZS-8ynJynjDNas&_r=1" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.tiktok.com/@sinergia.studio.mx?_t=ZS-8ynJynjDNas&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok de Sinergia Studio">
                 <AiFillTikTok className="cursor-pointer text-xl" />
               </a>
               <a className="pb-1" href="https://www.tiktok.com/@sinergia.studio.mx?_t=ZS-8ynJynjDNas&_r=1" target="_blank" rel="noopener noreferrer">sinergia.studio.mx</a>
             </div>
             <div className={`${styles.linkUnderline} hover:text-tercero flex items-center gap-2`}>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Sinergia Studio">
                 <FaFacebookSquare className="cursor-pointer text-md"/>
               </a>
               <a className="pb-1" href="#" target="_blank" rel="noopener noreferrer">sinergia.studio.mx</a>

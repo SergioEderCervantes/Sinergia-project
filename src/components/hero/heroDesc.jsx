@@ -27,22 +27,22 @@ export default function HeroDesc() {
   return (
     <section
       ref={container}
-      className="xlg:text-justify flex flex-col items-center px-16 text-center text-5xl text-gray-500 xl:w-4/6"
+      className="xlg:text-justify flex flex-col items-center xl:px-16 text-center text-5xl text-gray-500 xl:w-4/6"
     >
-      <h2 className="text-gunmetal animation my-2 xl:text-8xl">
-        Elevate your Brand
-      </h2>
+      <h1 className="text-gunmetal font-bold  text-3xl animation my-2 xl:text-5xl">
+        Sinergia Studio: Agencia de Marketing Digital y Software
+      </h1>
       <img
-        className="animation my-8 w-1/4  xl:hidden"
+        className="animation my-8 w-1/4 xl:hidden"
         src={`${import.meta.env.BASE_URL}isotipo.svg`}
-        alt="logo"
+        alt="Isotipo de Sinergia Studio"
       />
-      <h2 className="animation text-3xl xl:text-4xl my-2">With Strategic Marketing</h2>
-      <p className="animation  hidden text-justify text-lg font-semibold md:block px-2">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quae
-        deleniti, aperiam pariatur illo voluptate ab fugiat excepturi non?
-        Tenetur doloremque, aliquid quasi odit cupiditate dicta neque sapiente
-        libero mollitia! lorem
+      <h2 className="animation xl:w-3/4 my-2 text-2xl xl:text-4xl">
+        Activa tu marca, reinventa tu escencia
+      </h2>
+      <p className="animation hidden xl:w-3/4 text-center text-lg font-semibold md:block">
+        Diseñamos tu marca, creamos contenido, desarrollamos software y trazamos
+        estrategias que convierten seguidores en clientes.
       </p>
     </section>
   );

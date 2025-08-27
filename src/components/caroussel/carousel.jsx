@@ -16,9 +16,9 @@ export default function Carousel() {
   const deltaX = useRef(0);
   const autoPlayTime = 3000;
   const items = [
-    { name: "Slide 2", img: "/carr/carr2.jpg", alt: "Imagen 2" },
-    { name: "Slide 3", img: "/carr/carr3.jpg", alt: "Imagen 3" },
-    { name: "Slide 1", img: "/carr/carr1.jpg", alt: "Imagen 1" },
+    { name: "Slide 2", img: "carr/carr2.jpg", alt: "Equipo de Sinergia trabajando en la oficina" },
+    { name: "Slide 3", img: "carr/carr3.jpg", alt: "Diseñador gráfico de Sinergia creando contenido" },
+    { name: "Slide 1", img: "carr/carr5.jpeg", alt: "Administradora de Sinergia gestionando proyectos" },
   ];
 
   // 🔹 GSAP animación en cada cambio de slide

@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,7 +21,7 @@ export default function Card({ title, image, description }) {
           scrollTrigger: {
             trigger: container.current,
             start: "top 80%",
-          }
+          },
         },
       );
     },
@@ -31,13 +31,17 @@ export default function Card({ title, image, description }) {
   return (
     <div
       ref={container}
-      className="about-card my-8 min-h-120 w-full bg-white sm:w-3/4 md:w-2/4 md:min-w-80 lg:mx-10 lg:w-1/4"
+      className="about-card my-8 min-h-120 w-full bg-white sm:w-3/4 md:w-2/4 md:min-w-80 lg:mx-10 lg:w-1/4 md:mx-2"
     >
       <div
         ref={imgContainer}
         className="img-container grid aspect-square origin-bottom place-items-center bg-gray-600"
       >
-        <LazyLoadImage src={`${import.meta.env.BASE_URL}abt/${image}`} alt="Img" effect="blur"/>
+        <LazyLoadImage
+          src={`${import.meta.env.BASE_URL}abt/${image}`}
+          alt={`Foto de ${title || "miembro del equipo"}`}
+          effect="blur"
+        />
       </div>
     </div>
   );
