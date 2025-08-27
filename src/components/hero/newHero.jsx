@@ -40,7 +40,7 @@ export default function HeroAnimation() {
           scrollTrigger: {
             trigger: image.current,
             start: "center center",
-            end: "+=550",
+            end: "+=450dvh",
             pin: true,
             scrub: true,
           },
