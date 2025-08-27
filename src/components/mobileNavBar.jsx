@@ -34,7 +34,7 @@ export default function MobileNavBar({ isExpanded, setIsExpanded }) {
   return (
     <nav
       ref={container}
-      className={`border-gunmetal fixed top-15 left-1/2 z-10 flex max-h-0 w-full -translate-x-1/2 transform flex-col items-center overflow-hidden bg-white text-3xl transition-all duration-1000 ${isExpanded ? "max-h-100 border-b" : ""}`}
+      className={`border-gunmetal text-gunmetal fixed top-15 left-1/2 z-10 flex max-h-0 w-full -translate-x-1/2 transform flex-col items-center overflow-hidden bg-white text-3xl transition-all duration-1000 ${isExpanded ? "max-h-100 border-b" : ""}`}
     >
       <a
         onClick={handleClick}
