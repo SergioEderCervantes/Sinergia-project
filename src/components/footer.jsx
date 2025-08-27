@@ -12,20 +12,14 @@ export default function Footer() {
             <img className="w-20" src={`${import.meta.env.BASE_URL}isotipo_azul_claro.svg`} alt="Logotipo de Sinergia Studio en azul claro" />
             <h4 className="text-2xl font-bold">Sinergia</h4>
           </div>
-          <span>Elevating brand with strategic marketing solutions.</span>
+          <span>Activa tu marca, reinventa tu escencia</span>
         </div>
+        
         <div className="hidden flex-col gap-1 font-semibold lg:flex">
-          <h4 className="text-2xl font-bold">Services</h4>
-          <span className={`${styles.linkUnderline} hover:text-tercero cursor-pointer`}>
-            Digital Marketig
-          </span>
-          <span className={`${styles.linkUnderline} hover:text-tercero cursor-pointer`}>Brand Strategy</span>
-        </div>
-        <div className="hidden flex-col gap-1 font-semibold lg:flex">
-          <h4 className="text-2xl font-bold">Company</h4>
-          <span className={`${styles.linkUnderline} hover:text-tercero cursor-pointer`}>About us</span>
-          <span className={`${styles.linkUnderline} hover:text-tercero cursor-pointer`}>Our Team</span>
-          <span className={`${styles.linkUnderline} hover:text-tercero cursor-pointer`}>Contact</span>
+          <h4 className="text-2xl font-bold">Agencia</h4>
+          <a href="#about" className={`${styles.linkUnderline} hover:text-tercero cursor-pointer`}>Nosotros</a>
+          <a href="#services" className={`${styles.linkUnderline} hover:text-tercero cursor-pointer`}>Nuestro Equipo</a>
+          <a href="#contact"className={`${styles.linkUnderline} hover:text-tercero cursor-pointer`}>Contacto</a>
         </div>
         <div className="hidden flex-col gap-1 font-semibold lg:flex">
           <h4 className="text-2xl font-bold">Connect</h4>

@@ -55,6 +55,7 @@ export default function HeroAnimation() {
     >
       <img
         ref={image}
+        style={{ "--stop": "100%" }}
         className={`${active ? styles.fadeBottom : styles.fadeTop} w-full md:w-3/4 lg:w-1/2`}
         src={`${import.meta.env.BASE_URL}logotipo_gunmetal.svg`}
         alt="Animación del logotipo de Sinergia Studio"
