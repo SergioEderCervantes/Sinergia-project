@@ -1,20 +1,8 @@
 TODOs:
-
-Cambiar los colores a la nueva paleta, acomodar los colores en general
-
-Responsive general (carrusel sobretodo)
-
-
-poner imagenes
-
-terminar de traducir la pagina con cosas ya de verdad
-
-Llenar los proyectos
-
 pa la v2:
 
-Agregar el nuevo logo y animarlo diferente, con morphsvg
-Ver que hacer con la landpage
+Animar el logo diferente, con morphsvg
+
 Poner las redes en el header, cambiar estrategia de animacion
 
 limpiar assets y public, poner cosas en su lugar omaiga
@@ -22,3 +10,5 @@ limpiar assets y public, poner cosas en su lugar omaiga
 Ver el mejor layout para el carrusel, maybe lo mejor es quitar la navbar en el hero y en el carrusel y que aparezca despues de esos
 
 Quitar el about us y ponerlo como carrusel de movil
+
+Poner loaders o skeletons en las imagenes
