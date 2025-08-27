@@ -16,36 +16,36 @@ export default function HeroAnimation() {
 
   useGSAP(
     () => {
-      gsap.fromTo(
-        image.current,
-        { "--stop": "5%" },
-        {
-          "--stop": "100%",
-          duration: 1,
-          ease: "power3.out",
-          onComplete: toggleClass,
-        },
-      );
-
+      requestAnimationFrame(() => {
+        gsap.fromTo(
+          image.current,
+          { "--stop": "5%" },
+          {
+            "--stop": "100%",
+            duration: 1,
+            ease: "power3.out",
+            onComplete: toggleClass,
+          },
+        );
+      });
       gsap.fromTo(
         image.current,
         { "--stop": "100%" },
         {
           "--stop": "5%",
           ease: "None",
-          scrollTrigger:{
+          scrollTrigger: {
             trigger: image.current,
             start: "center center",
             end: "+=550",
             pin: true,
             scrub: true,
-          }
+          },
         },
       );
     },
     { scope: container },
   );
-
 
   return (
     <section
