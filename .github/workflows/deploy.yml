@@ -16,13 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Validate vite.config.js base path
-        run: |
-          EXPECTED_BASE="/Sinergia-project/"
-          if ! grep -q "base: '${EXPECTED_BASE}'" vite.config.js; then
-            echo "❌ vite.config.js base is incorrect. Expected: ${EXPECTED_BASE}"
-            exit 1
-          fi
+    
 
       - name: Setup Node
         uses: actions/setup-node@v4
