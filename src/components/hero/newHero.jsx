@@ -1,10 +1,9 @@
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import { useRef, useState } from "react";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import styles from "./newHero.module.css";
+import { useGSAP } from "@gsap/react";
+import styles from "./HeroAnimation.module.css";
 
-gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroAnimation() {
@@ -12,28 +11,32 @@ export default function HeroAnimation() {
   const container = useRef();
   const image = useRef();
 
-  const toggleClass = () => setActive(!active);
+  const toggleClass = () => setActive((prev) => !prev);
 
   useGSAP(
     () => {
-      requestAnimationFrame(() => {
-        gsap.fromTo(
-          image.current,
-          { "--stop": "5%" },
-          {
-            "--stop": "100%",
-            duration: 1,
-            ease: "power3.out",
-            onComplete: toggleClass,
+      // Primera animación de entrada
+      const intro = gsap.fromTo(
+        image.current,
+        { "--stop": "5%" },
+        {
+          "--stop": "100%",
+          duration: 1,
+          ease: "power3.out",
+          onComplete: () => {
+            toggleClass();
+            ScrollTrigger.refresh(); // 👈 recalcula scroll después de intro
           },
-        );
-      });
+        },
+      );
+
+      // Animación de scroll
       gsap.fromTo(
         image.current,
         { "--stop": "100%" },
         {
           "--stop": "5%",
-          ease: "None",
+          ease: "none",
           scrollTrigger: {
             trigger: image.current,
             start: "center center",
@@ -43,6 +46,11 @@ export default function HeroAnimation() {
           },
         },
       );
+
+      return () => {
+        intro.kill();
+        ScrollTrigger.getAll().forEach((st) => st.kill());
+      };
     },
     { scope: container },
   );
@@ -55,7 +63,7 @@ export default function HeroAnimation() {
     >
       <img
         ref={image}
-        style={{ "--stop": "100%" }}
+        style={{ "--stop": "100%" }} // valor inicial seguro
         className={`${active ? styles.fadeBottom : styles.fadeTop} w-full md:w-3/4 lg:w-1/2`}
         src={`${import.meta.env.BASE_URL}logotipo_gunmetal.svg`}
         alt="Animación del logotipo de Sinergia Studio"
