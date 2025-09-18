@@ -12,3 +12,5 @@ Ver el mejor layout para el carrusel, maybe lo mejor es quitar la navbar en el h
 Quitar el about us y ponerlo como carrusel de movil
 
 Poner loaders o skeletons en las imagenes
+
+Migrar a Astro para un SEO absoluto?

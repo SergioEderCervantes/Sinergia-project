@@ -7,7 +7,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     setSendText(true);
-    const webhookUrl = "http://ntfy.sh/Sinergia";
+    const webhookUrl = "https://ntfy.sh/Sinergia";
     e.preventDefault();
 
     const form = e.target;
